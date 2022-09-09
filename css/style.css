@@ -147,76 +147,9 @@ main {
   border-bottom: 1px solid #cccccc;
 }
 
-/* Change color of dropdown links on hover */
-#dropdown-content span:hover {background: rgba(100, 120, 140, 0.2);}
-
-
-/* #searchbar {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  position: relative;
-  top: -25px;
-  width: 100%;
-  height: 50px;
-  background-color: #f6f6f6;
-  border: 2px solid #acacac;
-  border-radius: 15px;
-}
-
-#searchbar input {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: transparent;
-  color: #656565;
-  font-size: 18px;
-}
-
-#searchbar input::placeholder {
-  opacity: 0.35;
-}
-
-#searchbar input:focus {
-  outline: none;
-}
-
-#searchbar i {
-  color: #acacac;
-  margin: 0 15px;
-  font-size: 25px;
-}
-
-input[list] + div[list] {
-  display: none;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  max-height: 164px;
-  overflow-y: auto;
-  background: #f6f6f6;
-  border: 2px solid #acacac;
-  border-top: none;
-  border-radius: 5px;
-  z-index: 2;
-}
-
-input[list] + div[list] span {
-  display: block;
-  padding: 10px 5px 10px 20px;
-  font-size: 16px;
-  color: #656565;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-input[list] + div[list] span:not(:last-child) {
-  border-bottom: 1px solid #cccccc;
-}
-
-input[list] + div[list] span:hover {
+#dropdown-content span:hover {
   background: rgba(100, 120, 140, 0.2);
-} */
+}
 
 #selected-ingredients {
   position: relative;
