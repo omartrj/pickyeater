@@ -82,7 +82,7 @@ $(document).on('keyup', '#searchbar input', function(event) {
   }
 });
 
-$.getJSON("ingredients.json", function (data) {
+$.getJSON("js/ingredients.json", function (data) {
   $.each(data, function (key, val) {
     $("#dropdown-content").append(
       '<span>' + key + "</span>"
