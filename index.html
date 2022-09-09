@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/e4e7bf3fa3.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js" defer></script>
+  <title>Picky Eater</title>
+</head>
+
+<body>
+  <header>
+    <img src="images/full-logo.png" height="70" />
+    <p>seleziona tutti gli ingredienti che hai! (~‾▿‾)~</p>
+  </header>
+
+  <main>
+    <div id="searchbar">
+      <i class="fa fa-search"></i>
+      <input type="text" name="ingredient" placeholder="Sale" list="ingredient-list" autocomplete="off" />
+      <div id="ingredient-list" list="ingredient-list">
+        <!-- <span>Pepe nero</span>
+        <span>Pepe</span>
+        <span>Pasta</span>
+        <span>Pomodorini</span>
+        <span>Barbabietole</span>
+        <span>Sale</span>
+        <span>Alette di pollo</span> -->
+      </div>
+    </div>
+
+    <div id="selected-ingredients"></div>
+  </main>
+
+  <footer>
+    <button id="searchbtn" type="submit" onclick="window.location.href = 'recipes.html'">
+      Cucina!<i class="fa-solid fa-angles-right"></i>
+    </button>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/lobster-v28-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/lobster-v28-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/inter-v12-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/inter-v12-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Inter";
+}
+
+header {
+  background-image: url("../images/food-pattern.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px 30px 50px 30px;
+}
+
+header img {
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 16px;
+  text-shadow: 1px 1px 2px #000000;
+  text-align: center;
+}
+
+#btns {
+  display: flex;
+  width: 95vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -30px;
+}
+
+#btns button {
+  font-size: 26px;
+  background-color: rgba(170, 170, 170, 0.434);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+#menu-btn {
+  padding: 5px 12px;
+}
+
+#settings-btn {
+  padding: 5px 7px;
+}
+
+main {
+  margin: 0 20px;
+  position: relative;
+}
+
+#searchbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  top: -25px;
+  width: 100%;
+  height: 50px;
+  background-color: #f6f6f6;
+  border: 2px solid #acacac;
+  border-radius: 15px;
+}
+
+#searchbar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: #656565;
+  font-size: 18px;
+}
+
+#searchbar input::placeholder {
+  opacity: 0.35;
+}
+
+#searchbar input:focus {
+  outline: none;
+}
+
+#searchbar i {
+  color: #acacac;
+  margin: 0 15px;
+  font-size: 25px;
+}
+
+input[list] + div[list] {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  max-height: 164px;
+  overflow-y: auto;
+  background: #f6f6f6;
+  border: 2px solid #acacac;
+  border-top: none;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+input[list] + div[list] span {
+  display: block;
+  padding: 10px 5px 10px 20px;
+  font-size: 16px;
+  color: #656565;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[list] + div[list] span:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+
+input[list] + div[list] span:hover {
+  background: rgba(100, 120, 140, 0.2);
+}
+
+#selected-ingredients {
+  position: relative;
+  text-align: center;
+  height: calc(100vh - 450px);
+  overflow: auto;
+  border-top: 4px dashed darkorange;
+  border-bottom: 4px dashed darkorange;
+}
+
+.ingredient {
+  display: inline-block;
+  border: 2px solid #0059ff;
+  border-radius: 30px;
+  padding: 5px 20px 8px 15px;
+  margin: 5px 5px;
+  color: #0059ff;
+}
+
+.ingredient.priority {
+  background-color: #0059ff;
+  color: white;
+}
+
+.ingredient span:nth-child(1) {
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  padding: 5px 5px 10px 15px;
+  margin: -5px 0px -10px -15px;
+}
+
+.ingredient span:nth-child(2) {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px 10px 0px;
+  margin: -10px -15px -10px 0px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+}
+
+#searchbtn {
+  background-color: orange;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 8px 50px;
+  border: 5px ridge #f7770f;
+  border-style: solid;
+  border-radius: 30px;
+  box-shadow: 5px 5px #cdcdcd;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+#searchbtn i {
+  margin-left: 10px;
+}
+
+.recipe {
+  position: relative;
+}
+
+li.recipe {
+  margin-bottom: 50px;
+}
+
+img.recipe-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.recipe-info {
+  position: relative;
+  top: 15px;
+  left: 0;
+  width: 50vw;
+  height: 145px;
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.608);
+  background-color: white;
+  padding: 11px;
+}
+
+ul#recipe-list {
+  position: relative;
+  top: 10px;
+}
+
+ul#recipe-list,
+ul.recipe-stats {
+  list-style: none;
+}
+
+.recipe-name {
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-block;
+  height: 47px;
+}
+
+.recipe-stats {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.recipe-stats i {
+  margin-right: 7px;
+}
+
+.recipe-stats li:first-child i {
+  color: orange;
+}
+
+.recipe-stats li:nth-child(2) i {
+  margin-right: 11px !important;
+}
+
+.recipe-stats li span {
+  font-weight: bold;
+}
+
+.recipe-stats li:nth-child(1) span::after {
+  content: "/5";
+  color: grey;
+  font-weight: lighter;
+}
+
+.recipe-stats li:nth-child(2) span::before {
+  content: "Difficoltà: ";
+  color: grey;
+  font-weight: lighter;
+}
+
+.recipe-stats li:nth-child(3) span::before {
+  content: "Tempo: ";
+  color: grey;
+  font-weight: lighter;
+}
+
+.favorite {
+  position: absolute;
+  bottom: -30px;
+  right: -10px;
+  z-index: 3;
+  background-image: url("../images/web_heart_animation.png");
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  background-position: left;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.animate {
+  animation: heart-burst 0.8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+.tags {
+  list-style: none;
+}
+
+.tags li {
+  display: inline;
+}
+
+.tags li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.vegan {
+  color: rgb(56, 203, 56);
+}
+
+.vegetarian {
+  color: green;
+}
+
+.glutenfree i:nth-child(1) {
+  color: goldenrod;
+}
+
+.glutenfree i:nth-child(2) {
+  color: red;
+  position: relative;
+  right: 18px;
+}
+
+.no-select {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.no-select:focus {
+  outline: none !important;
+}

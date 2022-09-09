@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/e4e7bf3fa3.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js" defer></script>
+  <title>Picky Eater</title>
+</head>
+
+<body>
+  <header>
+    <img src="images/full-logo.png" height="70" />
+    <div id="btns">
+      <button id="menu-btn"><i class="fa-solid fa-angle-left"></i></button>
+      <p>e ora scegli cosa cucinare!</p>
+      <button id="settings-btn"><i class="fa-solid fa-sliders"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <ul id="recipe-list">
+      <li class="recipe">
+        <div class="recipe-info">
+          <span class="recipe-name">Pasta alla carbonara</span>
+          <ul class="recipe-stats">
+            <li><i class="fa-solid fa-star"></i><span>4.2</span></li>
+            <li><i class="fa-solid fa-utensils"></i><span>Facile</span></li>
+            <li><i class="fa-regular fa-clock"></i><span>15 minuti</span></li>
+          </ul>
+        </div>
+        <img class="recipe-img" src="images/pasta-alla-carbonara.jpg" />
+        <div class="favorite no-select"></div>
+      </li>
+
+      <li class="recipe">
+        <div class="recipe-info">
+          <span class="recipe-name">Pollo con arance</span>
+          <ul class="recipe-stats">
+            <li><i class="fa-solid fa-star"></i><span>3.9</span></li>
+            <li>
+              <i class="fa-solid fa-utensils"></i><span>Difficile</span>
+            </li>
+            <li><i class="fa-regular fa-clock"></i><span>1 ora</span></li>
+          </ul>
+          <ul class="tags">
+            <li class="glutenfree">
+              <i class="fa-solid fa-wheat-awn"></i><i class="fa-solid fa-slash"></i>
+            </li>
+          </ul>
+        </div>
+        <img class="recipe-img" src="images/pollo-arancia.jpg" />
+        <div class="favorite no-select"></div>
+      </li>
+
+      <li class="recipe">
+        <div class="recipe-info">
+          <span class="recipe-name">Riso al curry</span>
+          <ul class="recipe-stats">
+            <li><i class="fa-solid fa-star"></i><span>3.9</span></li>
+            <li><i class="fa-solid fa-utensils"></i><span>Facile</span></li>
+            <li><i class="fa-regular fa-clock"></i><span>30 minuti</span></li>
+          </ul>
+          <ul class="tags">
+            <li class="vegetarian"><i class="fa-brands fa-pagelines"></i></li>
+            <li class="glutenfree">
+              <i class="fa-solid fa-wheat-awn"></i><i class="fa-solid fa-slash"></i>
+            </li>
+          </ul>
+        </div>
+        <img class="recipe-img" src="images/riso-curry.jpg" />
+        <div class="favorite no-select"></div>
+      </li>
+
+      <li class="recipe">
+        <div class="recipe-info">
+          <span class="recipe-name">Crostino vegano</span>
+          <ul class="recipe-stats">
+            <li><i class="fa-solid fa-star"></i><span>4.5</span></li>
+            <li><i class="fa-solid fa-utensils"></i><span>Facile</span></li>
+            <li><i class="fa-regular fa-clock"></i><span>20 minuti</span></li>
+          </ul>
+          <ul class="tags">
+            <li class="vegan"><i class="fa-solid fa-leaf"></i></li>
+            <li class="vegetarian"><i class="fa-brands fa-pagelines"></i></li>
+          </ul>
+        </div>
+        <img class="recipe-img" src="images/crostino-vegano.jpg" />
+        <div class="favorite no-select"></div>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
